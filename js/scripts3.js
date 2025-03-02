@@ -88,7 +88,7 @@ function createMap3(updatedCountriesJson) {
     // Calculate density (airports per square kilometer)
     updatedCountriesJson.features.forEach(country => {
         const area = turf.area(country) / 1e6; // Convert area to square kilometers
-        country.properties.density = (country.properties.count / area) *100000; // Airports per sq. km
+        country.properties.density = (country.properties.count / area) *100000; 
     });
 
     // Styling for the second map
@@ -119,7 +119,7 @@ function createMap3(updatedCountriesJson) {
         onEachFeature: function (feature, layer) {
             layer.bindPopup(
                 `<h3>${feature.properties.ADMIN}</h3>
-                 Airports Density: ${feature.properties.density.toFixed(2)} per 100000 sq. km`
+                 Airports Density: ${feature.properties.density.toFixed(2)} per 100,000 sq. km`
             );
         }
     }).addTo(map3);
