@@ -119,7 +119,7 @@ function createMap3(updatedCountriesJson) {
         onEachFeature: function (feature, layer) {
             layer.bindPopup(
                 `<h3>${feature.properties.ADMIN}</h3>
-                 Airports Density: ${feature.properties.density.toFixed(2)} per 100,000 sq. km`
+                 Airport Density: ${feature.properties.density.toFixed(2)} per 100,000 sq. km`
             );
         }
     }).addTo(map3);
